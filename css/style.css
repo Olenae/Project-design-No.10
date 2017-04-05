@@ -15,9 +15,11 @@ body{
     background-size: cover;
     background-position: center;
     position: relative;
+    float: left;
 }
 .container{
     height: 100%;
+    width: 100%;
 }
 .header-top{
     padding: 32px 0 0 33px;
@@ -100,4 +102,44 @@ h3{
 
 .active{
   background-color: #c44c4c; 
+}
+.right-header-block{
+    background: url(../img/bg2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100%;
+    width: 25%;
+    display: inline-block;
+    position: relative;
+}
+.menu{
+   margin-top: 98px;
+   margin-left: -40px;
+    
+    
+}
+.menu-left{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    
+}
+.menu-right{
+    display: inline-block;
+    width: 50%;
+}
+li{
+    list-style-type: none;    
+}
+li a{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 54px 0;
+    color: #ffffff;
+    
+}
+.button1{
+    position: absolute;
+    top: 20px;
+    right: 24px;
 }
