@@ -1,27 +1,31 @@
 @font-face {
-  font-family: "DIN-BlackAlternate";
-  src: url("../fonts/DINBlackAlternate.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/DINBlackAlternate.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    font-family: "DIN-BlackAlternate";
+    src: url("../fonts/DINBlackAlternate.eot");
+    /* IE9 Compat Modes */
+    src: url("../fonts/DINBlackAlternate.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
     url("../fonts/DINBlackAlternate.woff2") format("woff2"), /* Modern Browsers */
     url("../fonts/DINBlackAlternate.woff") format("woff"), /* Modern Browsers */
     url("../fonts/DINBlackAlternate.ttf") format("truetype"), /* Safari, Android, iOS */
     url("../fonts/DINBlackAlternate.otf") format("opentype"), /* Open Type Font */
-    url("../fonts/DINBlackAlternate.svg") format("svg"); /* Legacy iOS */
-  font-weight: normal;
-  font-style: normal;
+    url("../fonts/DINBlackAlternate.svg") format("svg");
+    /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "DIN-Light";
-  src: url("../fonts/DINLight.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/DINLight.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    font-family: "DIN-Light";
+    src: url("../fonts/DINLight.eot");
+    /* IE9 Compat Modes */
+    src: url("../fonts/DINLight.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
     url("../fonts/DINLight.woff2") format("woff2"), /* Modern Browsers */
     url("../fonts/DINLight.woff") format("woff"), /* Modern Browsers */
     url("../fonts/DINLight.ttf") format("truetype"), /* Safari, Android, iOS */
     url("../fonts/DINLight.otf") format("opentype"), /* Open Type Font */
-    url("../fonts/DINLight.svg") format("svg"); /* Legacy iOS */
-  font-weight: normal;
-  font-style: normal;
+    url("../fonts/DINLight.svg") format("svg");
+    /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -38,6 +42,10 @@ body {
     min-height: 704px;
 }
 
+.header-container {
+    display: flex;
+}
+
 
 /*    левый блок    */
 
@@ -48,10 +56,7 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    float: left;
 }
-
-
 
 .header-top {
     display: flex;
@@ -60,6 +65,7 @@ body {
     align-items: baseline;
     padding: 35px;
 }
+
 .logo {
     display: inline-block;
     color: #c44c4c;
@@ -67,10 +73,18 @@ body {
     font-weight: 500;
     text-transform: uppercase;
 }
+
 .header-nav {
     font-size: 14px;
     margin-top: 20px;
 }
+
+.header .fa {
+    cursor: pointer;
+    color: #949494;
+    margin: 0 6px;
+}
+
 .header-nav div,
 a {
     display: inline-block;
@@ -79,37 +93,44 @@ a {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #636262;
+    color: #636363;
 }
 
+
 /*   Предложение товара   */
+
 .product-header {
     margin: 136px 0 0 70px;
     width: 60%;
     display: flex;
     flex-wrap: wrap;
 }
+
 .product-text {
     padding-top: 60px;
     text-transform: uppercase;
     flex-shrink: 0;
     margin-bottom: 33px;
 }
+
 h2 {
     font-size: 34px;
     font-weight: 300;
     margin: 0;
 }
+
 h3 {
     font-size: 14px;
     font-weight: 200;
     margin: 6px 0;
 }
+
 .price {
     font-size: 17px;
     font-weight: 500;
     margin: 25px 0;
 }
+
 .button {
     font-size: 16px;
     color: #c44c4c;
@@ -119,15 +140,18 @@ h3 {
     line-height: 100%;
     font-weight: 500;
     margin: 0;
+    outline: none;
+    cursor: pointer;
 }
+
 
 /*  Кнопки   */
-.switcher-container {
 
+.switcher-container {
     text-align: center;
     margin-bottom: 40px;
-
 }
+
 .point {
     height: 9px;
     width: 9px;
@@ -136,79 +160,122 @@ h3 {
     border-radius: 50%;
     margin: 1px;
 }
+
 .active {
     background-color: #c44c4c;
 }
 
+
 /*правый блок */
+
 .right-header-block {
     background: url(../img/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 25%;
-    display: inline-block;
+    overflow: hidden;
+    width: 0%;
     position: relative;
+    transition: all 0.5s;
 }
+
+.right-header-block.active {
+    width: 30%;
+}
+
+@media (max-width:1200px) {
+    .right-header-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .right-header-block.active {
+        width: 400px;
+    }
+}
+
 .menu {
     margin-top: 98px;
     margin-left: -40px;
+    min-width: 410px;
 }
+
 .menu-left {
     display: inline-block;
     float: left;
     width: 50%;
 }
+
 .menu-right {
     display: inline-block;
     width: 50%;
 }
+
 li {
     list-style-type: none;
 }
+
 li a {
     font-size: 14px;
     font-weight: 400;
     margin: 54px 0;
     color: #ffffff;
 }
+
 .button1 {
     position: absolute;
     top: 20px;
     right: 24px;
 }
 
+
 /* вторая секция галерея товаров    */
-.price2 {
-    
-    
-}
+
+.price2 {}
+
+
 /* Стрелочки */
+
 .arrows {
     display: flex;
 }
+
+/*
 .prev,
 .next {
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #d91c74;
     width: 40px;
     height: 40px;
 }
+
 .prev {
     background-image: url(../img/left-arrow.svg);
 }
+
 .next {
     background-image: url(../img/right-arrow.svg);
 }
+*/
+
+/*
 .disable {
     opacity: 0.3;
 }
-          /*  Галерея */
-.gallery-wrapper{
-  overflow-x: scroll;/* До решения вопроса со стрелочками*/
-    display: flex;
+*/
+
+
+/*  Галерея */
+
+.gallery-wrapper {
+/*    overflow-x: scroll;*/
+    /* До решения вопроса со стрелочками*/
+/*     display: flex; */
 }
-.parfume-gallery  {
+
+/*
+.parfume-gallery {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -217,13 +284,16 @@ li a {
     margin-left: 30px;
     padding: 0px 30px 50px 50px;
 }
-.price2 h2{
+*/
+
+.price2 h2 {
     font-size: 28px;
     font-weight: 400;
     text-transform: uppercase;
     color: #4d4d4d;
 }
-.parfume-gallery h3 {
+
+.parfume h3 {
     font-size: 16px;
     font-family: "Segoe UI";
     color: #494949;
@@ -232,7 +302,8 @@ li a {
     margin-top: 5px;
     margin-bottom: 0;
 }
-.parfume-gallery h4 {
+
+.parfume h4 {
     font-size: 13px;
     font-family: "Segoe UI";
     color: #cecece;
@@ -241,7 +312,8 @@ li a {
     margin-top: 5px;
     margin-bottom: 0;
 }
-.parfume-gallery h5 {
+
+.parfume h5 {
     font-size: 13px;
     font-family: "Segoe UI";
     color: #c44c4c;
@@ -249,21 +321,26 @@ li a {
     margin-top: 5px;
     margin-bottom: 0;
 }
+
 .top {
     display: flex;
     justify-content: space-between;
     padding: 50px 100px 0 100px;
 }
+
 .parfume {
     text-align: center;
     margin: 0 20px;
 }
+
 .product-img {
     height: 240px;
 }
+
+
 /*  On_Women's_perfumes  */
 
-.action{
+.action {
     background: url(../img/Layer%207.jpg);
     background-size: cover;
     background-position: center;
@@ -272,24 +349,26 @@ li a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
 }
-.action h1{
-   font-size: 59px;
+
+.action h1 {
+    font-size: 59px;
     font-family: "Segoe UI";
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
     font-style: oblique;
 }
-.off{
+
+.off {
     height: 165px;
     width: 165px;
     border-radius: 100%;
     background: #eaeaea;
     flex-shrink: 0;
 }
-.off h2{
+
+.off h2 {
     font-size: 54px;
     align-self: center;
     font-family: "Segoe UI";
@@ -299,9 +378,9 @@ li a {
     text-align: center;
     font-style: oblique;
     margin-top: 30px;
-   
 }
-.off h3{
+
+.off h3 {
     font-size: 33px;
     font-family: "Segoe UI";
     color: #c44c4c;
@@ -310,49 +389,59 @@ li a {
     text-align: center;
     font-style: oblique;
     margin-top: 0;
-    
 }
-.offer{
+
+.offer {
     height: 560px;
     width: 370px;
     text-align: center;
     background: #fff;
 }
-.offer img{
+
+.offer img {
     margin-left: 35px;
 }
-.offer .product-text{
+
+.offer .product-text {
     padding-top: 0;
     text-align: center;
-    
 }
-.offer h2{
+
+.offer h2 {
     font-size: 32px;
     font-weight: 500;
     color: #434343;
 }
-.offer h3{
+
+.offer h3 {
     font-size: 12px;
     font-weight: 400;
     color: #969494;
     margin-left: 10px;
 }
-.offer p{
+
+.offer p {
     font-size: 24px;
     font-weight: 500;
     color: #acacac;
 }
-.offer .button{
+
+.offer .button {
     margin-bottom: 40px
 }
-.offer .point{
-  background-color: #acacac;
+
+.offer .point {
+    background-color: #acacac;
 }
-.offer .active{
-   background-color: #c44c4c; 
+
+.offer .active {
+    background-color: #c44c4c;
 }
-     /*  Шестая секция  */
-.discounts{
+
+
+/*  Шестая секция  */
+
+.discounts {
     height: 475px;
     padding-top: 13px;
     box-sizing: border-box;
@@ -365,7 +454,7 @@ li a {
     background-size: cover;
 }
 
-.subscribe-form{
+.subscribe-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,19 +462,24 @@ li a {
     height: 212px;
     padding: 0 10px;
 }
-.discounts h2{
+
+.discounts h2 {
     font-size: 30px;
     color: #2f2f2f;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
 }
-.discounts .button{
+
+.discounts .button {
     padding: 15px 56px;
     text-transform: uppercase;
-    
+    background: #eaeaea;
+    font-size: 16px;
+    font-weight: 500;
 }
-.email{
+
+.email {
     height: 45px;
     max-width: 470px;
     width: 100%;
@@ -398,16 +492,17 @@ li a {
     box-sizing: border-box;
     margin: 20px;
 }
-.bottom-block{
+
+.bottom-block {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 280px;
-   
     margin-top: 100px;
 }
-.footer-menu{
+
+.footer-menu {
     background: #2b2c30;
     display: flex;
     flex-direction: row;
@@ -415,7 +510,8 @@ li a {
     justify-content: center;
     padding: 38px 11%;
 }
-.twin-col{
+
+.twin-col {
     flex-basis: 50%;
     flex-shrink: 0;
     display: flex;
@@ -423,7 +519,8 @@ li a {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.column{
+
+.column {
     width: 185px;
     color: #919191;
     font-size: 14px;
@@ -431,13 +528,15 @@ li a {
     display: flex;
     flex-direction: column;
 }
-.column h3{
+
+.column h3 {
     color: #fff;
     text-transform: uppercase;
     font-family: "DIN-BlackAlternate";
     margin: 1.2em 0;
 }
-.column a{
+
+.column a {
     color: #888888;
     text-transform: capitalize;
     line-height: 1.8em;
@@ -445,26 +544,26 @@ li a {
     font-family: "DIN-Light";
 }
 
-.column a:hover{
-    color: #c44c4c;    
-
-}
-.column a:active{
-   color: #fff; 
+.column a:hover {
+    color: #c44c4c;
 }
 
-.fa{
+.column a:active {
+    color: #fff;
+}
+
+.fa {
     font-size: 20px;
     margin-right: 10px;
 }
-.copyright{
-    height: 40px;
+
+.copyright {
     background: #141518;
     text-align: center;
     font-family: "DIN-Light";
     color: #919191;
     font-size: 12px;
     font-weight: 200;
-    padding-top: 10px;
+    padding: 10px 0;
     box-sizing: border-box;
 }
