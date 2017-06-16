@@ -17,8 +17,7 @@
   margin-left: auto;
   margin-right: 0;
 */
-  margin-bottom: 10px;
-  margin-top: -42px; /*  */
+  margin: -42px 70px 10px 70px; /*  */
   padding-top: 50px; /* */
   position: relative;
   overflow: hidden;  /* Fix of Webkit flickering */
@@ -579,4 +578,16 @@ button.swiper-pagination-bullet {
   100% {
     transform: rotate(360deg);
   }
+}
+@media (max-width:778px) {
+    .swiper-container{
+        margin: 10px 0px 10px 0px;
+    }
+      .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        right: 80px;        
+    }
+    
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        right: 120px;
+    }
 }

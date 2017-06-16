@@ -144,9 +144,6 @@ h3 {
     cursor: pointer;
 }
 
-
-/*  Кнопки   */
-
 .switcher-container {
     text-align: center;
     margin-bottom: 40px;
@@ -180,18 +177,6 @@ h3 {
 
 .right-header-block.active {
     width: 30%;
-}
-
-@media (max-width:1200px) {
-    .right-header-block {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-    }
-    .right-header-block.active {
-        width: 400px;
-    }
 }
 
 .menu {
@@ -232,59 +217,6 @@ li a {
 /* вторая секция галерея товаров    */
 
 .price2 {}
-
-
-/* Стрелочки */
-
-.arrows {
-    display: flex;
-}
-
-/*
-.prev,
-.next {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #d91c74;
-    width: 40px;
-    height: 40px;
-}
-
-.prev {
-    background-image: url(../img/left-arrow.svg);
-}
-
-.next {
-    background-image: url(../img/right-arrow.svg);
-}
-*/
-
-/*
-.disable {
-    opacity: 0.3;
-}
-*/
-
-
-/*  Галерея */
-
-.gallery-wrapper {
-/*    overflow-x: scroll;*/
-    /* До решения вопроса со стрелочками*/
-/*     display: flex; */
-}
-
-/*
-.parfume-gallery {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    background: #fff;
-    margin-top: 65px;
-    margin-left: 30px;
-    padding: 0px 30px 50px 50px;
-}
-*/
 
 .price2 h2 {
     font-size: 28px;
@@ -335,6 +267,8 @@ li a {
 
 .product-img {
     height: 240px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -347,11 +281,14 @@ li a {
     height: 696px;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
+    overflow: hidden;
 }
 
 .action h1 {
+    margin-top: 324px;
+        margin-left: -46px;
     font-size: 59px;
     font-family: "Segoe UI";
     color: #fff;
@@ -361,6 +298,8 @@ li a {
 }
 
 .off {
+    margin-top: 184px;
+    margin-left: 38px;
     height: 165px;
     width: 165px;
     border-radius: 100%;
@@ -391,7 +330,14 @@ li a {
     margin-top: 0;
 }
 
+.discount {
+    display: flex;
+    justify-content: space-between;
+}
+
 .offer {
+    margin-top: 67px;
+    margin-right: 9%;
     height: 560px;
     width: 370px;
     text-align: center;
@@ -566,4 +512,103 @@ li a {
     font-weight: 200;
     padding: 10px 0;
     box-sizing: border-box;
+}
+
+@media (max-width:1200px) {
+    .right-header-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .right-header-block.active {
+        width: 414px;
+    }
+    .off {
+        /*    margin-left: 6%;*/
+    }
+    
+    .action h1{
+    }
+    
+    .offer {
+        /*        margin-right: 6%;*/
+    }
+}
+
+@media (max-width:992px) {
+    .discount {
+        flex-direction: column;
+        align-items: center;
+    }
+    .off {
+        margin-left: 0;
+    }
+    .action h1 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 48px;
+    }
+    .product-header{
+        margin-top: 10vw;
+}
+@media (max-width:850px){
+    .product-header{
+    text-align: center;
+    flex-direction: column;
+    margin: -30px 55% 0 7%;
+    }
+    
+    }
+}
+
+@media (max-width:778px) {
+    .header-top {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .header-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    }
+    
+    .product-header{
+    margin: -30px auto 0 auto;
+    align-items: center;
+    }
+    
+    .top {
+    padding: 50px 10px 0 10px;
+    text-align: center;
+    justify-content: center;
+}         
+    .action {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        background-position: 22% 50%;
+    }
+    .off {
+        margin-top: 70px;
+    }
+    .offer {
+    margin: 0 0 70px 0;
+    width: 327px;
+    overflow: hidden;
+    }
+    .action h1 {
+        margin: 12px;
+    }
+}
+
+@media (max-width:400px) {
+    .discounts .button {
+        padding-bottom: 30px;
+    }
+    
+    .right-header-block.active {
+    width: 100%;
+}
 }

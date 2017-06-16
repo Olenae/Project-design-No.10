@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>perfume</title>
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -111,13 +112,7 @@
             <div class="title">
                 <h2>Best Seller in Fragrance</h2>
             </div>
-            <!--            Стрелочки      -->
-            <div class="arrows">
-<!--
-                <div class="prev disable"></div>
-                <div class="next"></div>
--->
-            </div>
+        </div>
 
         </div>
 <!-- Swiper -->
@@ -175,12 +170,14 @@
     </div>
     <!--  On_Women's_perfumes   -->
 
-    <div class="action">
+   <div class="action">
+    <div class="discount">
         <div class="off">
             <h2>50%</h2>
             <h3>Off</h3>
         </div>
         <h1>on Women’s Perfumes</h1>
+    </div>
 
         <div class="offer">
             <img src="img/perfume(06).png" alt="">
@@ -211,12 +208,6 @@
             <div class="title">
                 <h2>TOP SELLERS FOR WOMEN</h2>
             </div>
-            <!--            Стрелочки      -->
-            <div class="arrows">
-                <div class="prev disable"></div>
-                <div class="next"></div>
-            </div>
-
         </div>
          <!--   Swiper-2 -->
     <div class="swiper-container">
@@ -277,11 +268,6 @@
         <div class="top">
             <div class="title">
                 <h2>TOP SELLERS FOR MEN</h2>
-            </div>
-            <!--            Стрелочки      -->
-            <div class="arrows">
-                <div class="prev disable"></div>
-                <div class="next"></div>
             </div>
         </div>
             <!--   Swiper-3 -->
@@ -420,6 +406,27 @@
 //        centeredSlides: true,
         paginationClickable: true,
         spaceBetween: 30,
+        // Responsive breakpoints
+
+  breakpoints: {
+
+    // when window width is <= 320px
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    992: {
+      slidesPerView: 3  
+    },
+    850: {
+      slidesPerView: 2,
+      spaceBetween: 0  
+    },
+    778: {
+      slidesPerView: 1  
+    }
+
+    }
     });
     document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
         e.preventDefault();
