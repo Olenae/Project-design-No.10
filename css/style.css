@@ -205,6 +205,28 @@ li a {
     font-weight: 400;
     margin: 54px 0;
     color: #ffffff;
+    position: relative;
+}
+
+li a::after{
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 3px;
+    background: #c34d4d;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+li a:hover::after{
+    opacity: 1;
+}
+
+
+.linie{
+    
 }
 
 .button1 {
